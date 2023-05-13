@@ -9,6 +9,7 @@ enum OverlayFormat {
 
   ///United States government ID cards
   cardID3,
+  cardID4,
 
   ///SIM cards
   simID000
@@ -47,6 +48,12 @@ class CardOverlay implements OverlayModel {
         return CardOverlay(ratio: 1.42, cornerRadius: 0.067);
       case (OverlayFormat.cardID3):
         return CardOverlay(ratio: 1.42, cornerRadius: 0.057);
+        case (OverlayFormat.cardID4):
+      return CardOverlay(
+        ratio: 1.5,
+        cornerRadius: 0.66,
+        orientation: OverlayOrientation.portrait,
+      );
       case (OverlayFormat.simID000):
         return CardOverlay(ratio: 1.66, cornerRadius: 0.073);
     }
